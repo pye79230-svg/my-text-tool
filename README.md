@@ -1,44 +1,41 @@
-文本分片工具专业版 (TextSplitter Pro)
-一个基于 Web 的本地化文本处理工具，专为处理超长文档（如小说、日志、代码库）而设计。它能在浏览器端高效地将大文件分割成适合 AI 模型（如 ChatGPT, Claude）阅读的小片段。
-✨ 核心特性
-🔒 隐私优先：采用 Local-First 架构，所有文件处理均在浏览器内存中完成，数据绝不上传至任何服务器。
-🌍 多语言支持：内置多种编码格式支持（UTF-8, GBK, Shift_JIS 等），完美解决中文、日文老文档的乱码问题。
-🧠 智能断句：
-缓冲区模式：基于语义的智能断句算法，自动识别中英文句号、换行符，防止句子被截断。
-正则模式：支持自定义正则表达式（如 第.+章）进行结构化分割。
-⚡ 极速处理：利用异步非阻塞机制，轻松处理 MB 级以上的纯文本文件。
-🛠️ 开发者友好：支持自定义头部注入（Prompt Injection），方便批量生成 AI 提示词。
-🚀 快速开始
-依赖环境
-本项目基于 React 和 Tailwind CSS 构建。
-安装与运行
-克隆项目
-git clone [https://github.com/你的用户名/text-splitter-pro.git](https://github.com/你的用户名/text-splitter-pro.git)
+# 📄 Auto Text Splitter (自动文本切分工具)
 
+这是一个基于 React 开发的纯前端长文本处理工具，专为处理百万字级别的大文件（如小说、资料）设计。所有数据仅在本地浏览器处理，**绝对保障隐私安全**。
 
-安装依赖
-cd text-splitter-pro
-npm install
+## 🔗 在线直接使用
+👉 **[点击这里直接使用本工具 (无需下载)](https://symphonious-cendol-9021df.netlify.app)**
 
+---
 
-启动开发服务器
-npm run dev
+## ✨ 核心功能
+* **📂 超大文本支持**：轻松处理 90万-100万+ 字数的 TXT 文本文件，无卡顿。
+* **✂️ 智能切分模式**：
+    * **平均切分**：例如将 900万字自动切分成 20 份。
+    * **定长切分**：例如每 5万字切分为一个文件。
+* **🔒 100% 隐私安全**：代码完全运行在你的浏览器中，**文件不会上传到任何服务器**，请放心使用。
+* **📦 一键打包**：切分完成后，自动将所有文件打包为 ZIP 格式下载。
 
+## 🛠️ 技术栈
+* React 18
+* Vite
+* TailwindCSS
+* Lucide React
 
-📖 使用指南
-拖拽上传：直接将 .txt, .md, .json 等文件拖入上传区。
-选择编码：如果文件显示乱码，请在配置面板切换编码（推荐尝试 GBK 或 Shift_JIS）。
-配置参数：
-分片大小：推荐设置为 15,000 字（针对大多数 LLM 上下文窗口优化）。
-头部注入：可输入 "请阅读以下片段..." 等指令，工具会自动插入到每个分片的开头。
-导出：点击“复制”直接粘贴给 AI，或下载为独立文件。
-🛠️ 技术栈
-Frontend: React.js, TypeScript
-Styling: Tailwind CSS
-Icons: Lucide React
-Build Tool: Vite (推荐)
-🤝 贡献 (Contributing)
-欢迎提交 Issues 和 Pull Requests！如果你有更好的断句算法或新的功能建议，请随时贡献。
-📄 许可证
-本项目采用 MIT License 许可证。
+## 💻 开发者指南 (如何本地运行)
+如果你是开发者，想在本地运行此代码：
 
+1.  **克隆项目**
+    ```bash
+    git clone [https://github.com/pye79230-svg/my-text-tool.git](https://github.com/pye79230-svg/my-text-tool.git)
+    ```
+2.  **安装依赖**
+    ```bash
+    npm install
+    ```
+3.  **启动项目**
+    ```bash
+    npm run dev
+    ```
+
+---
+*Created by pye79230-svg*
